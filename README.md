@@ -7,5 +7,7 @@ migrates it and builds the same repository on Wodby 2.
   `web` on Wodby 1; it is the Wodby 2 WordPress default.
 - `wp-config.php` is not committed: both platforms write it on container start.
 - `web/e2e-wodby1-fixture.txt` lets the test check that the migrated site was built from this repository.
+- `.wodby/pipeline.yml` builds and deploys it with Wodby CI on Wodby 2. WordPress core is committed, so it has no
+  Composer step.
 
 Keep the content stable: the test depends on it.
